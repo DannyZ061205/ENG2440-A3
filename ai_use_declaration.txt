@@ -1,0 +1,25 @@
+AI-USE DECLARATION: ENG2440 Assignment 3
+Zichen Zhao (25011189)
+
+Tool:
+  Claude Code was used as a coding and writing assistant.
+
+How it was used:
+  * Code and experiments: it cowrote the notebook code and the helper modules.
+  * Knowledge and syntax: it explained library syntax and the concepts I had not met before, including
+    message passing over molecular graphs, Morgan fingerprints and Bemis-Murcko scaffolds.
+  * Debugging: it diagnosed the environment problems I hit (an RDKit release whose scaffold function was
+    broken, and a notebook kernel that was silently running a different Python) and caught a bug in which
+    split indices addressed the cleaned table but were used to fetch graphs from the raw dataset, so the
+    network had been receiving the wrong molecules. That bug had inflated the results, and fixing it
+    lowered them.
+  * Report: it codrafted the latex report from the notebook outputs and revised it for language, logic and flow
+    at my request. 
+  * Figures: it drew the figures to a figure-style guide I supplied as my standard, proposed several
+    color schemes and molecule-drawing styles, and I chose one of each to maximize the intuitiveness and clarity of each figure. 
+  * Review: it wrote a script that checks the notebook and the report against every requirement in the
+    brief, and that every number quoted in the report appears in a notebook output.
+
+My role:
+  I directed the work and made the decisions, reviewed every version, and made sure I can explain and
+  reproduce every result. I set the standards the work had to meet. I steered the coding agent toward my intended directions and made sure it met my high standards. 
