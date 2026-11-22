@@ -204,7 +204,7 @@ def place_text(ax, text, prefer=(0.03, 0.97), **kw):
 
 def molecule_grid(fig, items, ncols=3, caption_ratio=0.40, caption_pt=None,
                   col_headers=None, width_ratios=None, tag_ratio=0.26, header_pt=None,
-                  bond_length=None):
+                  header_pad=7, bond_length=None):
     """Grid of structures, each with a caption row of its own so a long SMILES always fits.
 
     `items` are dicts with keys `smiles`, `label` and optionally `probability` and `caption`; an entry
@@ -231,7 +231,10 @@ def molecule_grid(fig, items, ncols=3, caption_ratio=0.40, caption_pt=None,
             class_tag(tag_ax, item["label"], probability=item.get("probability"), y=0.5, va="center",
                       prefix=item.get("tag_prefix", ""))
         if col_headers and row == 0 and col < len(col_headers) and col_headers[col]:
-            tag_ax.set_title(col_headers[col], fontsize=header_pt or TICK_PT, color=INK, pad=3)
+            # Measured: the badge box is taller than the tag row it sits in, so it overhangs the
+            # axes top. A 3 pt pad left the header sitting on it; the gap has to clear the overhang.
+            tag_ax.set_title(col_headers[col], fontsize=header_pt or TICK_PT, color=INK,
+                             pad=header_pad)
         ax = fig.add_subplot(gs[3 * row + 1, col])
         molecule_panel(ax, item["smiles"], bond_length=bond_length)
         caption_ax = fig.add_subplot(gs[3 * row + 2, col])
