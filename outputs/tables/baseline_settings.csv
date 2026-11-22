@@ -1,0 +1,3 @@
+split,fingerprint,classifier,class weighting,C (chosen on validation),threshold (chosen on validation),seed
+random,"Morgan radius 2, 2048 bits","logistic regression (lbfgs, max_iter 5000)","balanced, from the training subset",0.1,0.4957,0
+scaffold,"Morgan radius 2, 2048 bits","logistic regression (lbfgs, max_iter 5000)","balanced, from the training subset",0.1,0.6413,0

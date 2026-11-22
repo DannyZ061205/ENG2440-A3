@@ -1,0 +1,4 @@
+column,feature,meaning,vocabulary,codes seen,categories seen
+0,bond_type,"single, double, triple or aromatic bond",22,4,"SINGLE, DOUBLE, TRIPLE, AROMATIC"
+1,stereo,"double-bond stereochemistry (none, Z, E, ...)",6,3,"STEREONONE, STEREOZ, STEREOE"
+2,is_conjugated,bond is part of a conjugated system,2,2,"False, True"

@@ -1,0 +1,21 @@
+\begin{tabular}{llcc}
+\toprule
+Column & Meaning & Vocabulary & Codes seen \\
+\midrule
+\multicolumn{4}{l}{\itshape Atom features, \texttt{x}} \\
+\texttt{atomic\_num} & chemical element (code = atomic number) & 119 & 13 \\
+\texttt{chirality} & local three-dimensional arrangement at the atom & 9 & 3 \\
+\texttt{degree} & number of bonded neighbors in the graph & 11 & 5 \\
+\texttt{formal\_charge} & assigned charge (code 5 is neutral) & 12 & 4 \\
+\texttt{num\_hs} & attached hydrogens, which the graph does not store as nodes & 9 & 4 \\
+\texttt{num\_radical\_electrons} & unpaired electrons & 5 & 2 \\
+\texttt{hybridization} & orbital hybridization (sp, sp2, sp3, ...) & 8 & 4 \\
+\texttt{is\_aromatic} & atom belongs to an aromatic ring & 2 & 2 \\
+\texttt{is\_in\_ring} & atom belongs to any ring & 2 & 2 \\
+\addlinespace
+\multicolumn{4}{l}{\itshape Bond features, \texttt{edge\_attr}} \\
+\texttt{bond\_type} & single, double, triple or aromatic bond & 22 & 4 \\
+\texttt{stereo} & double-bond stereochemistry (none, Z, E, ...) & 6 & 3 \\
+\texttt{is\_conjugated} & bond is part of a conjugated system & 2 & 2 \\
+\bottomrule
+\end{tabular}

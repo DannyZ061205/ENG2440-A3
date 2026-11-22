@@ -1,0 +1,7 @@
+split,subset,molecules,positives,positive_proportion,unique_scaffolds
+random,train,1376,1050,0.7630813953488372,
+random,validation,295,225,0.7627118644067796,
+random,test,294,225,0.7653061224489796,
+scaffold,train,1375,1054,0.7665454545454545,430.0
+scaffold,validation,295,227,0.7694915254237288,295.0
+scaffold,test,295,219,0.7423728813559322,295.0

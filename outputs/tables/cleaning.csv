@@ -1,0 +1,4 @@
+stage,molecules
+distributed CSV,2050
+RDKit-parseable,2039
+after removing duplicates and conflicts,1965

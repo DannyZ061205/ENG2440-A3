@@ -1,0 +1,5 @@
+case,error,test molecule,true label,predicted p,nearest training molecule,its label,Tanimoto
+FP 1,false positive,COc1cc([C@@H]2c3cc4c(cc3[C@@H](O[C@@H]3O[C@@H]5CO[C@@H](C)O[C@H]5[C@H](O)[C@H]3O)C3COC(=O)[C@@H]32)OCO4)cc(OC)c1O,0,1.0,COc1cc([C@@H]2c3cc4c(cc3[C@@H](OC3OC5COC(c6cccs6)OC5C(O)C3O)[C@H]3COC(=O)[C@H]23)OCO4)cc(OC)c1O,1,0.753
+FP 2,false positive,Nc1nc(N)c2nc(-c3ccccc3)c(N)nc2n1,0,1.0,NCCc1nc(-c2ccccc2)cs1,0,0.273
+FN 1,false negative,CO[C@H](C(=O)[C@@H](O)[C@@H](C)O)[C@@H]1Cc2cc3cc(O[C@H]4C[C@@H](O[C@H]5C[C@@H](O)[C@H](O)[C@@H](C)O5)[C@H](O)[C@@H](C)O4)c(C)c(O)c3c(O)c2C(=O)[C@H]1O[C@H]1C[C@@H](O[C@H]2C[C@@H](O[C@H]3C[C@](C)(O)[C@H](O)[C@@H](C)O3)[C@H](O)[C@@H](C)O2)[C@H](O)[C@@H](C)O1,1,0.006,CC(=O)[C@]1(O)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](N)[C@H](O)[C@H](C)O2)C1)C(=O)c1ccccc1C3=O,0,0.248
+FN 2,false negative,C[C@@H]1O[C@@H]1P(=O)(O)O,1,0.008,O=P(O)(O)OCC(Cl)(Cl)Cl,1,0.172

@@ -1,0 +1,10 @@
+column,feature,meaning,vocabulary,codes seen,categories seen
+0,atomic_num,chemical element (code = atomic number),119,13,"1, 5, 6, 7, ..."
+1,chirality,local three-dimensional arrangement at the atom,9,3,"CHI_UNSPECIFIED, CHI_TETRAHEDRAL_CW, CHI_TETRAHEDRAL_CCW"
+2,degree,number of bonded neighbors in the graph,11,5,"0, 1, 2, 3, ..."
+3,formal_charge,assigned charge (code 5 is neutral),12,4,"-1, 0, 1, 2"
+4,num_hs,"attached hydrogens, which the graph does not store as nodes",9,4,"0, 1, 2, 3"
+5,num_radical_electrons,unpaired electrons,5,2,"0, 1"
+6,hybridization,"orbital hybridization (sp, sp2, sp3, ...)",8,4,"S, SP, SP2, SP3"
+7,is_aromatic,atom belongs to an aromatic ring,2,2,"False, True"
+8,is_in_ring,atom belongs to any ring,2,2,"False, True"
