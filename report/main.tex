@@ -31,19 +31,20 @@ Code and executed notebook: \url{\repourl}
 \end{center}
 \suppressfloats[t]  % page 1 only: a top float here would be typeset above the title block
 
-\noindent\textbf{Summary.} A molecule is a graph, so this report builds one for every compound in the
-BBBP dataset \cite{wu2018,martins2012} and asks whether training a graph neural network on that
-representation helps predict the blood--brain barrier label. Cleaning removes 11 unparseable SMILES,
-collapses duplicates by canonical SMILES and deletes 10 molecules carrying contradictory labels, leaving
+\noindent\textbf{Summary.} A molecule is a graph of atoms joined by bonds, so a model can be given that
+structure directly rather than a fixed-length fingerprint summarizing it. This report asks whether a model
+that reads the graph predicts the blood--brain barrier label in the BBBP dataset \cite{wu2018,martins2012}
+more accurately than one that reads the fingerprint. Cleaning removes 11 unparseable SMILES, collapses
+duplicates by canonical SMILES and deletes 10 molecules carrying contradictory labels, leaving
 1,965 molecules, 76.3\% positive. A bond-aware graph neural network (3 GINEConv layers, 242,564
 parameters) is compared against Morgan fingerprints with logistic regression under a stratified random
 split and a Bemis--Murcko scaffold split \cite{bemis1996}. The headline result is negative: \emph{the
 graph network does not beat the fingerprint baseline}. On the untouched test sets the baseline reaches
 ROC-AUC 0.919 against the network's $0.903 \pm 0.009$ (random) and 0.876 against $0.866 \pm 0.011$
-(scaffold), gaps smaller than the baseline's own 95\% bootstrap interval ($\pm 0.04$). What does move the
-score is the split: both models drop by 0.037--0.043 when analogs are separated, three to four times
-the seed-to-seed spread. The label is a curated literature annotation, so every number measures agreement
-with that annotation, not biological fact.
+(scaffold); a paired bootstrap on the same test molecules cannot separate the two models under either
+split. What does move the score is the split: both models drop by 0.037--0.043 when analogs are separated,
+three to four times the seed-to-seed spread. The label is a curated literature annotation, so every number
+measures agreement with that annotation, not biological fact.
 
 \section{Task and data}
 
